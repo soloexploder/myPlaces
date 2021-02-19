@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Грушенька.jpg",
+      "filename" : "Hookah Place.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Hookah Place@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Hookah Place@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

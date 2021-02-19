@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Hookah Place.jpg",
+      "filename" : "Chelentano.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Chelentano@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Chelentano@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

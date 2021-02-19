@@ -13,6 +13,8 @@
 		FAA1C0DD25DD08AC00825E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1C0DC25DD08AC00825E8F /* Assets.xcassets */; };
 		FAA1C0E025DD08AC00825E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1C0DE25DD08AC00825E8F /* LaunchScreen.storyboard */; };
 		FAA1C0EA25DD0CD600825E8F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */; };
+		FAA1C0ED25DE959300825E8F /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */; };
+		FAA1C0F125DEA0F300825E8F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FAA1C0DF25DD08AC00825E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA1C0E125DD08AC00825E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
+		FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				FAA1C0D325DD08AA00825E8F /* AppDelegate.swift */,
 				FAA1C0D525DD08AA00825E8F /* SceneDelegate.swift */,
 				FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */,
+				FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */,
+				FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */,
 				FAA1C0D925DD08AA00825E8F /* Main.storyboard */,
 				FAA1C0DC25DD08AC00825E8F /* Assets.xcassets */,
 				FAA1C0DE25DD08AC00825E8F /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA1C0D425DD08AA00825E8F /* AppDelegate.swift in Sources */,
+				FAA1C0ED25DE959300825E8F /* CustomViewCell.swift in Sources */,
+				FAA1C0F125DEA0F300825E8F /* PlaceModel.swift in Sources */,
 				FAA1C0EA25DD0CD600825E8F /* MainTableViewController.swift in Sources */,
 				FAA1C0D625DD08AA00825E8F /* SceneDelegate.swift in Sources */,
 			);
