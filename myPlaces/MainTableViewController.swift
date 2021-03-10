@@ -8,9 +8,14 @@
 import UIKit
 import RealmSwift
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var reversedSortingButton: UIBarButtonItem!
     
     var places: Results<Place>!
+    var ascendingSorting = true
     
     
     override func viewDidLoad() {
@@ -24,13 +29,13 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return places.isEmpty ? 0 : places.count
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomViewCell
 
         let place = places[indexPath.row]
@@ -50,7 +55,7 @@ class MainTableViewController: UITableViewController {
     
     // MARK: Table view delegate
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             let place = places[indexPath.row]
@@ -60,7 +65,7 @@ class MainTableViewController: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
     
@@ -77,7 +82,7 @@ class MainTableViewController: UITableViewController {
             newPlaceVC.currentPlace = place
         } else {
             print("prepare not entere")
-            print(segue.identifier)
+            print(segue.identifier as Any)
         }
     }
     
@@ -87,6 +92,32 @@ class MainTableViewController: UITableViewController {
         guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
         
         newPlaceVC.savePlace()
+        tableView.reloadData()
+    }
+    
+    @IBAction func sortSelection(_ sender: UISegmentedControl) {
+        
+        sorting()
+    }
+    
+    @IBAction func reversedSorting(_ sender: Any) {
+        
+        ascendingSorting.toggle()
+        
+        if ascendingSorting {
+            reversedSortingButton.image = #imageLiteral(resourceName: "AZ")
+        } else {
+            reversedSortingButton.image = #imageLiteral(resourceName: "ZA")
+        }
+        sorting()
+    }
+    
+    private func sorting() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            places = places.sorted(byKeyPath: "date", ascending: ascendingSorting)
+        } else {
+            places = places.sorted(byKeyPath: "name", ascending: ascendingSorting)
+        }
         tableView.reloadData()
     }
 }
