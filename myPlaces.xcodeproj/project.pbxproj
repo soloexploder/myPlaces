@@ -18,6 +18,7 @@
 		FAA1C0EA25DD0CD600825E8F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */; };
 		FAA1C0ED25DE959300825E8F /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */; };
 		FAA1C0F125DEA0F300825E8F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */; };
+		FAC52D1F25FA16B600A762D2 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52D1E25FA16B600A762D2 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		FAC52D1E25FA16B600A762D2 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */,
 				FA7DF9D825F0CE5C003E5EE9 /* NewPlaceViewController.swift */,
 				FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */,
+				FAC52D1E25FA16B600A762D2 /* RatingControl.swift */,
 				FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */,
 				FA037B4D25F399B40019EAA3 /* StorageManager.swift */,
 				FAA1C0D925DD08AA00825E8F /* Main.storyboard */,
@@ -221,6 +224,7 @@
 				FA7DF9D925F0CE5C003E5EE9 /* NewPlaceViewController.swift in Sources */,
 				FAA1C0ED25DE959300825E8F /* CustomViewCell.swift in Sources */,
 				FA037B4E25F399B40019EAA3 /* StorageManager.swift in Sources */,
+				FAC52D1F25FA16B600A762D2 /* RatingControl.swift in Sources */,
 				FAA1C0F125DEA0F300825E8F /* PlaceModel.swift in Sources */,
 				FAA1C0EA25DD0CD600825E8F /* MainTableViewController.swift in Sources */,
 				FAA1C0D625DD08AA00825E8F /* SceneDelegate.swift in Sources */,

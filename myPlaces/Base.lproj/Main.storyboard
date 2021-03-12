@@ -145,6 +145,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="NnC-UV-Zkh">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NnC-UV-Zkh" id="lFW-Xa-lEV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqq-s3-IZU" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bqq-s3-IZU" firstAttribute="centerX" secondItem="lFW-Xa-lEV" secondAttribute="centerX" id="71a-Hc-3kS"/>
+                                                <constraint firstItem="bqq-s3-IZU" firstAttribute="centerY" secondItem="lFW-Xa-lEV" secondAttribute="centerY" id="WAL-8X-Uxg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -170,6 +187,7 @@
                         <outlet property="placeLocation" destination="P54-fZ-wgU" id="w21-WN-r3c"/>
                         <outlet property="placeName" destination="JLo-bj-m4n" id="dm3-9V-Vne"/>
                         <outlet property="placeType" destination="IEl-dn-xbe" id="oeZ-va-Pyn"/>
+                        <outlet property="ratingControle" destination="bqq-s3-IZU" id="vg1-WW-az2"/>
                         <outlet property="saveButton" destination="NKe-JT-ZaI" id="454-Kp-5zV"/>
                     </connections>
                 </tableViewController>
@@ -223,9 +241,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dpw-GH-Zhf">
-                                <rect key="frame" x="0.0" y="127" width="414" height="760"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-GH-Zhf">
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HdI-g0-76e" customClass="CustomViewCell" customModule="myPlaces" customModuleProvider="target">
@@ -290,7 +307,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ORt-Rt-Jwr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="32"/>
                                 <segments>
                                     <segment title="Date"/>
                                     <segment title="Name"/>
@@ -303,10 +320,13 @@
                         <viewLayoutGuide key="safeArea" id="gbg-mK-9Dg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dpw-GH-Zhf" firstAttribute="top" secondItem="ORt-Rt-Jwr" secondAttribute="bottom" constant="1" id="5aD-Yf-jMW"/>
+                            <constraint firstItem="dpw-GH-Zhf" firstAttribute="leading" secondItem="gbg-mK-9Dg" secondAttribute="leading" id="Azd-UQ-NhO"/>
                             <constraint firstItem="ORt-Rt-Jwr" firstAttribute="top" secondItem="gbg-mK-9Dg" secondAttribute="top" id="ENM-EE-pVA"/>
                             <constraint firstItem="ORt-Rt-Jwr" firstAttribute="leading" secondItem="gbg-mK-9Dg" secondAttribute="leading" id="Fgy-PR-TK4"/>
+                            <constraint firstItem="dpw-GH-Zhf" firstAttribute="trailing" secondItem="gbg-mK-9Dg" secondAttribute="trailing" id="Hmr-xi-Uje"/>
                             <constraint firstItem="gbg-mK-9Dg" firstAttribute="trailing" secondItem="ORt-Rt-Jwr" secondAttribute="trailing" id="Jc9-qT-PFI"/>
+                            <constraint firstAttribute="bottom" secondItem="dpw-GH-Zhf" secondAttribute="bottom" id="dTE-fW-4Kq"/>
+                            <constraint firstItem="dpw-GH-Zhf" firstAttribute="top" secondItem="ORt-Rt-Jwr" secondAttribute="bottom" constant="1" id="msz-Jb-80I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" id="oJn-Ya-hx8">
@@ -332,6 +352,11 @@
             <point key="canvasLocation" x="-143.47826086956522" y="24.776785714285712"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="bqq-s3-IZU">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="OQU-uT-gEI"/>
     </inferredMetricsTieBreakers>
