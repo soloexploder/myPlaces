@@ -154,6 +154,11 @@
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqq-s3-IZU" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -194,7 +199,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sb-mE-1aT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ejp-dR-LeM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="659" y="415"/>
+            <point key="canvasLocation" x="657.97101449275362" y="414.50892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SM3-TK-YhH">
@@ -260,39 +265,54 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hW6-DH-zMq">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="212" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB9-BX-p6O">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="212" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Tg-fDA">
-                                                            <rect key="frame" x="0.0" y="27.5" width="302" height="21"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="212" height="21"/>
                                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBz-ER-h8q">
-                                                            <rect key="frame" x="0.0" y="51.5" width="302" height="17.5"/>
+                                                            <rect key="frame" x="0.0" y="51.5" width="212" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="6QD-nI-Q8l" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="34.5" width="90" height="16"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="Jjp-he-Il1"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="hW6-DH-zMq" secondAttribute="trailing" constant="16" id="Ncr-P3-peX"/>
+                                                <constraint firstItem="6QD-nI-Q8l" firstAttribute="centerY" secondItem="EfZ-TT-4CT" secondAttribute="centerY" id="0D8-lt-36E"/>
+                                                <constraint firstAttribute="trailing" secondItem="6QD-nI-Q8l" secondAttribute="trailing" constant="8" id="ABp-l5-6oa"/>
                                                 <constraint firstItem="7jB-qK-0bd" firstAttribute="leading" secondItem="EfZ-TT-4CT" secondAttribute="leading" constant="15" id="PXS-rE-egk"/>
                                                 <constraint firstAttribute="bottom" secondItem="hW6-DH-zMq" secondAttribute="bottom" constant="8" id="e17-i7-wEz"/>
                                                 <constraint firstItem="7jB-qK-0bd" firstAttribute="centerY" secondItem="EfZ-TT-4CT" secondAttribute="centerY" id="oao-u1-6BY"/>
                                                 <constraint firstItem="hW6-DH-zMq" firstAttribute="leading" secondItem="7jB-qK-0bd" secondAttribute="trailing" constant="16" id="ob5-Cc-VoG"/>
+                                                <constraint firstItem="6QD-nI-Q8l" firstAttribute="leading" secondItem="hW6-DH-zMq" secondAttribute="trailing" constant="8" id="reZ-Tw-GEP"/>
                                                 <constraint firstItem="hW6-DH-zMq" firstAttribute="top" secondItem="EfZ-TT-4CT" secondAttribute="top" constant="8" id="rxF-oI-rVv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="6QD-nI-Q8l" id="r3N-O8-n1L"/>
                                             <outlet property="imageOfPlace" destination="7jB-qK-0bd" id="S80-A6-ffO"/>
                                             <outlet property="locationLabel" destination="9wU-Tg-fDA" id="1Mk-1D-ZiK"/>
                                             <outlet property="nameLabel" destination="MB9-BX-p6O" id="xD1-tv-B7j"/>
@@ -353,6 +373,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="6QD-nI-Q8l">
+            <size key="intrinsicContentSize" width="90" height="16"/>
+        </designable>
         <designable name="bqq-s3-IZU">
             <size key="intrinsicContentSize" width="252" height="44"/>
         </designable>
