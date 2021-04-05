@@ -12,7 +12,8 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    var place: Place!
+    var place = Place()
+    let annotationIdentifier = "annotationIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,4 +53,28 @@ class MapViewController: UIViewController {
         }
     }
     
+}
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        guard !(annotation is MKUserLocation) else {return nil}
+        
+        var annotatiomView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) as? MKPinAnnotationView
+        
+        if annotatiomView == nil {
+            annotatiomView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotatiomView?.canShowCallout = true
+        }
+        
+        if let imageData = place.imageData {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            imageView.layer.cornerRadius = 10
+            imageView.clipsToBounds = true
+            imageView.image = UIImage(data: imageData)
+            annotatiomView?.rightCalloutAccessoryView = imageView
+        }
+        
+        return annotatiomView
+    }
 }
