@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A74F96A5DA42FA6A7028D64 /* Pods_myPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E666C775CEBB082013C31627 /* Pods_myPlaces.framework */; };
+		8BEDFD84261B447A00344474 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEDFD83261B447A00344474 /* MapViewController.swift */; };
 		FA037B4E25F399B40019EAA3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA037B4D25F399B40019EAA3 /* StorageManager.swift */; };
 		FA7DF9D925F0CE5C003E5EE9 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DF9D825F0CE5C003E5EE9 /* NewPlaceViewController.swift */; };
 		FAA1C0D425DD08AA00825E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1C0D325DD08AA00825E8F /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BEDFD83261B447A00344474 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C49F6D11350DEFED370D941B /* Pods-myPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myPlaces.release.xcconfig"; path = "Target Support Files/Pods-myPlaces/Pods-myPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		E0CE196C2F1FAD74F5C5F210 /* Pods-myPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myPlaces.debug.xcconfig"; path = "Target Support Files/Pods-myPlaces/Pods-myPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		E666C775CEBB082013C31627 /* Pods_myPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				FAA1C0D525DD08AA00825E8F /* SceneDelegate.swift */,
 				FAA1C0E925DD0CD600825E8F /* MainTableViewController.swift */,
 				FA7DF9D825F0CE5C003E5EE9 /* NewPlaceViewController.swift */,
+				8BEDFD83261B447A00344474 /* MapViewController.swift */,
 				FAA1C0EC25DE959300825E8F /* CustomViewCell.swift */,
 				FAC52D1E25FA16B600A762D2 /* RatingControl.swift */,
 				FAA1C0F025DEA0F300825E8F /* PlaceModel.swift */,
@@ -224,6 +227,7 @@
 				FA7DF9D925F0CE5C003E5EE9 /* NewPlaceViewController.swift in Sources */,
 				FAA1C0ED25DE959300825E8F /* CustomViewCell.swift in Sources */,
 				FA037B4E25F399B40019EAA3 /* StorageManager.swift in Sources */,
+				8BEDFD84261B447A00344474 /* MapViewController.swift in Sources */,
 				FAC52D1F25FA16B600A762D2 /* RatingControl.swift in Sources */,
 				FAA1C0F125DEA0F300825E8F /* PlaceModel.swift in Sources */,
 				FAA1C0EA25DD0CD600825E8F /* MainTableViewController.swift in Sources */,
